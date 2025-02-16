@@ -10,23 +10,49 @@ To clone the repository, run:
 git clone git@github.com:petrankar/millenia-angular.git
 ```
 
-## Backend
+## Installation
 
-To start the backend server,
+To install the backend dependencies, run:
 
-run:
+```bash
+cd millenia-angular/backend
+```
+
+```bash
+npm install
+```
+
+To install the frontend dependencies, run:
+
+```bash
+cd millenia-angular/frontend
+```
+
+```bash
+npm install
+```
+
+## Backend Start
+
+To start the backend server, run:
 
 ```bash
 cd backend
+```
+
+```bash
 npx json-server db.json
 ```
 
-## Development server
+## Frontent Start
 
 To start the frontend, run:
 
 ```bash
 cd frontend
+```
+
+```bash
 ng serve
 ```
 
