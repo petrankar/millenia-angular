@@ -1,0 +1,28 @@
+<div class="product-list">
+  <div class="mini-header">
+    <div class="emphasis">
+      <div class="heading">Portfolio</div>
+      <div class="subheading">All your accounts at a glance</div>
+    </div>
+
+    <img src="images/person-suitcase.svg" alt="person with a suitcase" />
+
+    <div class="actions">
+      <button mat-flat-button class="mil-primary-button">VIEW ALL OUR PRODUCTS</button>
+    </div>
+  </div>
+  <div class="portfolio-list">
+    <div class="item">
+      <span class="title">CURRENT Accounts</span>
+      <app-product-card *ngFor="let product of currentAccounts" [product]="product" (click)="goToProductDetails(product.id)" />
+    </div>
+    <div class="item">
+      <span class="title">TIME DEPOSITS</span>
+      <app-product-card *ngFor="let product of loans" [product]="product" (click)="goToProductDetails(product.id)" />
+    </div>
+    <div class="item">
+      <span class="title">CARDS</span>
+      <app-product-card *ngFor="let product of creditCards" [product]="product" (click)="goToProductDetails(product.id)" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f4f5fb;
+
+  img {
+    margin-left: 20px;
+    width: 80px;
+    padding: 25px 40px;
+  }
+}
+
+.right-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 48px;
+
+  .icons {
+    color: var(--primary-color);
+  }
+
+  .greetings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .greet {
+      font-family: Roboto;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 28.08px;
+      letter-spacing: 0px;
+      color: var(--primary-color);
+    }
+
+    .username {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15.96px;
+      letter-spacing: 0px;
+      color: var(--primary-color);
+    }
+  }
+}
+
+mat-icon {
+  &:hover {
+    cursor: pointer;
+  }
+}

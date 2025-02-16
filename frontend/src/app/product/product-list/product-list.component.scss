@@ -1,0 +1,104 @@
+.product-list {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+  @media (min-width: 1024px) {
+    gap: 40px;
+  }
+
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mini-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    .emphasis {
+      height: 100px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-self: stretch;
+      gap: 8px;
+      border-radius: none;
+      padding: 21px 18px;
+      margin: 0 -10px;
+      background: linear-gradient(to right, #3d429a, #9d235e);
+      @media (min-width: 1024px) {
+        height: 320px;
+        flex-direction: column;
+        border-radius: 0 40px 0 40px;
+        padding: 40px;
+        margin: 0;
+      }
+      .heading {
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: 0px;
+        color: #ffffff;
+      }
+      .subheading {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 23.94px;
+        letter-spacing: 0px;
+        color: #d84e91;
+        display: none;
+        @media (min-width: 1024px) {
+          display: block;
+        }
+      }
+    }
+
+    img {
+      position: relative;
+      top: -155px;
+      width: 140px;
+      display: none;
+      @media (min-width: 1024px) {
+        display: block;
+      }
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      display: none;
+      @media (min-width: 1024px) {
+        display: block;
+      }
+    }
+  }
+
+  .portfolio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    padding: 0 16px;
+
+    @media (min-width: 1024px) {
+      padding: 0;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      .title {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 23.8px;
+        color: #2e3275;
+        padding: 10px 0;
+        @media (min-width: 1024px) {
+          padding: 16px 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.product-card {
+  padding: 10px;
+  display: flex;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 4px 5px 0px rgba(102, 104, 144, 0.3);
+  max-width: 641px;
+  min-height: 126px;
+
+  @media (min-width: 1024px) {
+    min-height: 183px;
+  }
+
+  .content {
+    flex: 1;
+    margin: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    @media (min-width: 1024px) {
+      gap: 28px;
+    }
+
+    .top-row {
+      .title {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15.96px;
+        color: var(--primary-color);
+      }
+
+      .subtitle {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #2e3275;
+        word-break: break-all;
+      }
+    }
+
+    .bottom-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      .thumb {
+        padding: 8px 18px;
+        border-radius: 4px;
+        background-color: #f4f5fb;
+        box-shadow: 0px 4px 5px 0px rgba(40, 43, 92, 0.2488);
+
+        img {
+          color: linear-gradient(91.68deg, #007ec6 0.23%, #1d6693 100%);
+        }
+      }
+      .balance {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 4px;
+
+        .title {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+          text-align: right;
+          color: #6267c1;
+        }
+
+        .value {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 18.75px;
+          text-align: right;
+          color: #2e3275;
+        }
+      }
+    }
+  }
+}
+
+.product-card:hover {
+  cursor: pointer;
+}
+
+.vertical-line {
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  width: 8px;
+  left: 0;
+  border-radius: 20px;
+}
+
+.blue {
+  background: #38b7ff;
+}
+
+.purple {
+  background-color: #961b92;
+}
+
+.green {
+  background-color: #5ab970;
+}

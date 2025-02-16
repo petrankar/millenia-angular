@@ -1,0 +1,44 @@
+<div class="login-page">
+  <div class="container">
+    <div class="img-container">
+      <img src="/images/city-people.svg" alt="City People" />
+    </div>
+
+    <div class="cta">
+      <img src="images/logo-millenia.svg" alt="millenia logo" />
+
+      <div class="welcome-text">
+        <span>Hello</span>
+        <h2>Please enter your Credentials</h2>
+      </div>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+          <mat-label appearance="outline">Username</mat-label>
+          <input matInput type="text" formControlName="username" placeholder="username" />
+          <mat-error *ngIf="loginForm.get('username')?.hasError('required')"> Username is required </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" placeholder="password" />
+          <mat-error *ngIf="loginForm.get('password')?.hasError('required')"> Password is required </mat-error>
+          <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')"> Password must be at least 8 characters long </mat-error>
+        </mat-form-field>
+        <mat-checkbox formControlName="keepMeLoggedIn">Keep me logged in</mat-checkbox>
+
+        <a class="forgot-text" routerLink="/reset-password">I forgot my Credentials</a>
+        <button type="submit" mat-flat-button class="login-button mil-primary-button">LOGIN</button>
+      </form>
+      <a class="sign-up text-flex-centered" routerLink="/sign-up">Don't you have an account? <span>SIGN UP</span></a>
+
+      <div class="footer text-flex-centered">
+        <a
+          *ngFor="let link of footerLinks; let i = index"
+          [routerLink]="'/' + link.path"
+          [ngClass]="{ 'border-left': i > 0, 'padding-left': i > 0 }"
+          >{{ link.title }}</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

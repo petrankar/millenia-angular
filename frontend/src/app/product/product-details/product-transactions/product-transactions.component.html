@@ -1,0 +1,27 @@
+<div class="product-transactions">
+  <div class="header">
+    <div class="export">
+      <mat-icon fontIcon="download" class="icon" aria-hidden="false" aria-label="document export icon"></mat-icon>
+      <span>EXPORT </span>
+    </div>
+    <div class="title-filter">
+      <div class="title-container">
+        <span class="title">Latest TRANSACTIONS</span>
+        <span class="subtitle">You can tap any transaction below to initiate a new one with the same information</span>
+      </div>
+      <mat-icon fontIcon="filter_list" class="icon" aria-hidden="false" aria-label="filter icon"></mat-icon>
+    </div>
+  </div>
+  <ul>
+    <li *ngFor="let item of transactions">
+      <div class="date">{{ item.date | date : 'dd/MM/yyyy' }}</div>
+      <div class="title">{{ item.title }}</div>
+      <div class="amount">
+        <span class="subtitle"> {{ item.subtitle }} </span>
+        <span class="value">
+          {{ item.amount }} <span class="currency"> {{ item.currencyCode }} </span></span
+        >
+      </div>
+    </li>
+  </ul>
+</div>

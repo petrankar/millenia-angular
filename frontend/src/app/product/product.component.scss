@@ -1,0 +1,27 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: minmax(100px, 190px) 1fr;
+    gap: 16px;
+  }
+
+  overflow: hidden;
+}
+
+.bottom-nav-menu {
+  position: sticky;
+  bottom: 0;
+  border-top: 1px solid lightgray;
+  background-color: var(--background-color);
+}

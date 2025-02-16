@@ -1,0 +1,24 @@
+<div class="account-card">
+  <div class="vertical-line"></div>
+  <div class="details">
+    <div class="top-row">
+      <div class="thumb"><img src="icons/home.svg" alt="home icon" /></div>
+      <div class="balance-container">
+        <span class="header-text">{{ account.avalailableBalanceText }}</span>
+        <div class="balance">
+          {{ account.avalailableBalance }}<span class="currency"> {{ account.currencyCode }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="options-container">
+      <div class="option">
+        <div class="account-name">{{ account.title }}</div>
+        <mat-icon fontIcon="edit" class="icon" aria-hidden="false" aria-label="edit icon"></mat-icon>
+      </div>
+      <div class="option">
+        <div class="account-number">{{ account.subtitle }}</div>
+        <mat-icon fontIcon="content_copy" class="icon" aria-hidden="false" aria-label="copy icon"></mat-icon>
+      </div>
+    </div>
+  </div>
+</div>

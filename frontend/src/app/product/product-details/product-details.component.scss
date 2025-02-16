@@ -1,0 +1,117 @@
+.product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .content {
+    height: 100%;
+    background: linear-gradient(to right, #3d429a, #9d235e) no-repeat;
+    background-size: 100% 507px;
+    background-color: white;
+
+    @media (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 37px;
+      padding: 33px;
+      height: 515px;
+      border-top-right-radius: 90px;
+      border-bottom-left-radius: 90px;
+
+      background: linear-gradient(91.68deg, #3d429a 0.23%, #9d235e 100%);
+    }
+    .account {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      padding: 27px;
+      @media (min-width: 1024px) {
+        padding: 0;
+      }
+
+      a {
+        color: #fff;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .title {
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 35px;
+        @media (min-width: 1024px) {
+          font-size: 40px;
+
+          line-height: 40px;
+          align-self: unset;
+        }
+        color: #ffffff;
+        align-self: center;
+      }
+
+      .account-card {
+        align-self: center;
+        @media (min-width: 1024px) {
+          align-self: unset;
+        }
+      }
+    }
+
+    .transactions {
+      background-color: #f4f5fb;
+      padding: 18px;
+      @media (min-width: 1024px) {
+        padding: 0px;
+        background-color: unset;
+      }
+      .header {
+        display: flex;
+        padding-bottom: 18px;
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          gap: 50px;
+
+          li {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            color: #3d429a;
+            @media (min-width: 1024px) {
+              color: #ffffff;
+            }
+          }
+
+          li:first-child {
+            font-weight: 500;
+            color: rgba(216, 78, 145, 1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.fab-button {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 30px;
+  border: none;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}

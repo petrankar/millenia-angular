@@ -1,0 +1,27 @@
+<div class="product-details">
+  <div class="content">
+    <div class="account">
+      <div>
+        <a mat-button (click)="goBack()" (keyup.enter)="goBack()" tabindex="0">
+          <mat-icon fontIcon="arrow_back" class="back-icon" aria-hidden="false" aria-label="back icon"></mat-icon>
+        </a>
+      </div>
+      <div class="title">Current Accounts</div>
+      <app-account-card class="account-card" [account]="account"></app-account-card>
+    </div>
+
+    <div class="transactions">
+      <div class="header">
+        <ul>
+          <li *ngFor="let item of transactionHeader">{{ item }}</li>
+        </ul>
+      </div>
+
+      <app-product-transactions [transactions]="transactions"></app-product-transactions>
+    </div>
+  </div>
+</div>
+<button mat-icon-button class="fab-button mil-primary-button display-mobile center-content">
+  <mat-icon fontIcon="add"></mat-icon>
+  <span>NEW TRANSACTION</span>
+</button>

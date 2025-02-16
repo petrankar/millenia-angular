@@ -1,0 +1,135 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.product-transactions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 30px 27px;
+  @media (min-width: 1024px) {
+    border-radius: 30px;
+    position: absolute;
+    max-width: 360px;
+  }
+  @media (min-width: 1080px) {
+    max-width: 320px;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 420px;
+  }
+  background-color: white;
+  box-shadow: 0px 4px 5px 0px rgba(102, 104, 144, 0.3);
+
+  .header {
+    .export {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 32px;
+      .icon {
+        color: #2e3275;
+      }
+
+      span {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 15.96px;
+        letter-spacing: 1.25px;
+        color: #2e3275;
+      }
+    }
+
+    .title-filter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      .title-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .title {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 16px;
+          color: #3d429a;
+        }
+        .subtitle {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 15.96px;
+          color: #3d429a;
+          word-break: break-all;
+        }
+      }
+      .icon {
+        color: #2e3275;
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 22px;
+    border-radius: 8px;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-bottom: 1px solid #abaede;
+      gap: 8px;
+      padding-bottom: 16px;
+
+      .date {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        color: #2e3275;
+      }
+
+      .title {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 24px;
+        color: #2e3275;
+      }
+      .amount {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 8px;
+
+        .subtitle {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #3d429a;
+        }
+        .value {
+          font-weight: 600;
+          font-size: 22px;
+          line-height: 32px;
+          text-align: right;
+          color: #2e3275;
+
+          .currency {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 16px;
+            color: #3d429a;
+          }
+        }
+      }
+    }
+  }
+}

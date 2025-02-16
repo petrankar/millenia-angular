@@ -1,0 +1,23 @@
+<div class="app-header">
+  <a routerLink="/">
+    <img src="images/logo-millenia.svg" alt="millenia logo" />
+  </a>
+
+  <div class="right-container" *ngIf="username">
+    <mat-icon class="icons" fontIcon="mail" aria-hidden="false" aria-label="mail icon"></mat-icon>
+    <mat-icon
+      class="icons"
+      fontIcon="power_settings_new"
+      (click)="logout()"
+      aria-hidden="false"
+      aria-label="Power settings icon"
+    ></mat-icon>
+
+    <div class="greetings">
+      <span class="greet">Hello</span>
+      <span class="username">{{ username }}</span>
+    </div>
+
+    <mat-icon fontIcon="account_circle" color="primary" class="icons" aria-hidden="false"></mat-icon>
+  </div>
+</div>

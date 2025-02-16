@@ -1,0 +1,121 @@
+.account-card {
+  display: flex;
+  padding: 6px 8px 6px 4px;
+  gap: 22px;
+  min-width: 360px;
+  max-width: 440px;
+  border-radius: 8px;
+  background: #f4f5fb;
+  background-image: url('/images/account-card-illustration.png');
+  background-position: top left;
+  background-repeat: no-repeat;
+  box-shadow: 0px 4px 16px 0px rgba(102, 104, 144, 0.3);
+
+  .vertical-line {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 8px;
+    border-radius: 20px;
+    background: rgba(94, 35, 92, 1);
+  }
+
+  .details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px 18px 12px 0;
+    gap: 80px;
+
+    .top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .thumb {
+        padding: 8px 28px;
+        border-radius: 4px;
+        background-color: #f4f5fb;
+        box-shadow: 0px 4px 5px 0px rgba(40, 43, 92, 0.2488);
+
+        img {
+          color: linear-gradient(91.68deg, #007ec6 0.23%, #1d6693 100%);
+        }
+      }
+
+      .balance-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 7px;
+        .header-text {
+          color: #3d429a;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 15.96px;
+          letter-spacing: 0px;
+          text-align: right;
+        }
+
+        .balance {
+          font-weight: 700;
+          color: #2e3275;
+          font-size: 22px;
+          line-height: 24px;
+          @media (min-width: 1024px) {
+            font-size: 28px;
+            line-height: 32px;
+          }
+          .currency {
+            font-weight: 400;
+            color: #3d429a;
+          }
+        }
+      }
+    }
+
+    .options-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+
+      .option {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .account-name {
+          font-weight: 500;
+          color: rgba(157, 35, 94, 1);
+          font-size: 18px;
+          line-height: 20px;
+          @media (min-width: 1024px) {
+            font-size: 22px;
+            line-height: 24px;
+          }
+        }
+
+        .account-number {
+          font-weight: 500;
+          color: rgba(46, 50, 117, 1);
+          font-size: 16px;
+          line-height: 18px;
+          @media (min-width: 1024px) {
+            font-size: 22px;
+            line-height: 24px;
+          }
+        }
+
+        .icon {
+          color: rgba(46, 50, 117, 1);
+        }
+
+        .icon:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

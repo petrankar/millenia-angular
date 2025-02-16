@@ -1,0 +1,14 @@
+:root {
+  --primary-color: #3d429a;
+  --secondary-color: #9d235e;
+  --tertiary-color: #2e3275;
+  --background-color: #f4f5fb;
+
+  // breakpoints
+  $xs: 480px; // Extra Small devices (phones)
+  $sm: 640px; // Small devices (bigger phones)
+  $md: 768px; // Medium devices (tablets)
+  $lg: 1024px; // Large devices (small laptops)
+  $xl: 1280px; // Extra Large devices (desktops)
+  $xxl: 1536px; // Extra Extra Large devices (large screens)
+}

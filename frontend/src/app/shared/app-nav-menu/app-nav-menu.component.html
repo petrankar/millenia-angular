@@ -1,0 +1,18 @@
+<nav>
+  <a routerLink="/product" routerLinkActive="active-link" class="home">
+    <mat-icon fontIcon="home" class="icon-size">home</mat-icon>
+    <span class="display-desktop">Home</span>
+  </a>
+  <a routerLink="/dashboard" routerLinkActive="active-link">
+    <mat-icon fontIcon="dashboard" class="icon-size" aria-hidden="false" aria-label="dashboard icon"></mat-icon>
+    <span class="display-desktop">Dashboard</span>
+  </a>
+  <a routerLink="/product" routerLinkActive="active-link" [ngClass]="{ active: isActive('/product') }">
+    <mat-icon fontIcon="insert_chart" class="icon-size">link</mat-icon>
+    <span class="display-desktop">Portfolio</span>
+  </a>
+  <a routerLink="/transactions" routerLinkActive="active-link">
+    <mat-icon fontIcon="sync_alt" class="icon-size"></mat-icon>
+    <span class="display-desktop">Transactions</span>
+  </a>
+</nav>

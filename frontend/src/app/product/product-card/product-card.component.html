@@ -1,0 +1,17 @@
+<div class="product-card">
+  <div class="vertical-line" [ngClass]="getClassByProductType()"></div>
+  <div class="content">
+    <div class="top-row">
+      <div class="title">{{ product.titleNickname }}</div>
+      <div class="subtitle">{{ product.subtitle }}</div>
+    </div>
+    <div class="bottom-row">
+      <div class="thumb"><img src="icons/home.svg" alt="home icon" /></div>
+
+      <div class="balance">
+        <div class="title">Available Balance</div>
+        <div class="value">{{ product.balance }} {{ product.currencyCode }}</div>
+      </div>
+    </div>
+  </div>
+</div>
